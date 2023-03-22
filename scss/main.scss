@@ -1,0 +1,41 @@
+@import './animation';
+@import './config';
+@import './home';
+@import './menus';
+@import './responsive';
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.logo {
+    width: 100%;
+    height: 90px; 
+    @include center;     
+    box-shadow: 5px 8px 2px rgba(23, 212, 83, 1);
+    img {
+        object-fit:contain;
+    }
+}
+
+
+
+.logo img {
+    width: 250px;  
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+footer {
+    padding-top: 20px;
+    background-color: #363636;
+
+}

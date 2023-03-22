@@ -1,0 +1,14 @@
+@mixin pointsix {
+    transition: all .6s ease-in-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(360turn);
+    }
+
+    100% {
+        transform: rotate(0turn);
+    }
+}
+

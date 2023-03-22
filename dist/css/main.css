@@ -246,6 +246,7 @@
 .menu {
   width: 90%;
   margin: auto;
+  color: red;
 }
 .menu-tab {
   background-color: white;

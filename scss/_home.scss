@@ -3,14 +3,16 @@
     width: 100%;
     height: 40px;
     background-color: #eeeeee; 
+ 
 }
 
 .city_location p{
     padding-left: 10px;
+    font-family: $font-title;
  }
 
 .map-icon {
-    @include center;
+    @include center;    
 }
 
 
@@ -32,12 +34,15 @@
         font-size: 14px;
         color: #eeeeee;
         background-image: linear-gradient(#FF79DA , #9356DC);   
-
+        /*not working*/
+        font-family: $font-title; 
     }
 
     &__p {
-       font-size: 25px;
+       font-size: 30px;
        text-align: center;
+       font-family: $font-title;    
+        
     }
 
     #{&}__p{
@@ -45,15 +50,17 @@
     }
 
     #{&}__p1{
-        font-weight: map-get($font-weights, thin)       
+        font-weight: map-get($font-weights, thin)        
     }
 
     &__p1 {
         font-size: 16px;
         text-align: center;
         margin: 5px 50px 10px 50px;
+        font-family: $font-text;
         
     }
+
 
 }
 
@@ -89,7 +96,8 @@
     &__text {         
         color: black;    
         margin-left: 10px;  
-                
+        font-family: $font-text;
+                      
    }
 
    .fa-solid {
@@ -109,11 +117,15 @@
         font-size: 14px; 
         position: relative;  
         left: -10px;
-      
      
     }
- 
+
+    & h2 {
+        font-family: $font-title;
+    }
+
 }
+
 
  /*restaurant*/
 .restaurant {
@@ -122,9 +134,10 @@
     padding-top: 30px;
     padding-bottom: 30px;
     gap: 15px;
-
+    background-color: #F8F8F8;
     h2 {
         width: 90%;
+        font-family: $font-title;
     }
 }
   
@@ -166,6 +179,7 @@
     &__text p {
         margin: 0;
         line-height: 27px;
+        font-family: $font-text;
     }
 
     &:hover {
@@ -235,19 +249,21 @@
     color: white;
        
    h3 {
-        padding-bottom: 15px;
-        
-      
+        padding-bottom: 20px;
+        font-family: $font-title;  
+        font-weight: map-get($font-weights, bold)    
     }
     
     li {
         list-style: none;
-        padding-bottom: 5px;
+        padding-bottom:5px;
+        font-family: $font-text;
     }  
    
     .footer-list-suggest {
         padding-right: 9px;
     }
+    
 
     .footer-list-suggest1 {
         padding-right: 4px;

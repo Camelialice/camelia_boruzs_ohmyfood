@@ -1,3 +1,4 @@
+
 .main {
      background-color: #f6f6f6;
      width: 100%;
@@ -5,13 +6,32 @@
      position: relative;
      bottom: 90px;
      border-radius: 40px 40px 0px 0px;
-
 }
 
+
+  /**The Menu Full Pallette title**/
 .menu {
     width: 90%;
     margin: auto;
-  
+
+    &__title {
+        padding-top: 18px;
+        padding-bottom: 20px;
+        @include row;   
+        justify-content: space-between;   
+        
+        h2 {
+            font-family: $font-title;
+
+            /**not working**/
+            font-weight: map-get($font-weights, bold);
+        }
+
+         
+      
+    }
+
+   
 
     &-tab {
         background-color: white;
@@ -77,20 +97,8 @@
 
 
 
-.menu-title {
-    @include row;   
-    justify-content: space-between;    
-   
-}
-  
-
 
 
   
- 
-
-     
-
-
 
 

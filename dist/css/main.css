@@ -23,6 +23,7 @@
 
 .city_location p {
   padding-left: 10px;
+  font-family: Roboto, Sans-serif;
 }
 
 .map-icon {
@@ -50,10 +51,13 @@
   font-size: 14px;
   color: #eeeeee;
   background-image: linear-gradient(#FF79DA, #9356DC);
+  /*not working*/
+  font-family: Roboto, Sans-serif;
 }
 .book_menu__p {
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
+  font-family: Roboto, Sans-serif;
 }
 .book_menu .book_menu__p {
   font-weight: 700;
@@ -65,6 +69,7 @@
   font-size: 16px;
   text-align: center;
   margin: 5px 50px 10px 50px;
+  font-family: Shrikhand, Sans-serif;
 }
 
 /*How it works filters*/
@@ -97,6 +102,7 @@
 .filter-search__text {
   color: black;
   margin-left: 10px;
+  font-family: Shrikhand, Sans-serif;
 }
 .filter-search .fa-solid {
   padding-right: 10px;
@@ -116,6 +122,9 @@
   position: relative;
   left: -10px;
 }
+.filter-search h2 {
+  font-family: Roboto, Sans-serif;
+}
 
 /*restaurant*/
 .restaurant {
@@ -127,9 +136,11 @@
   padding-top: 30px;
   padding-bottom: 30px;
   gap: 15px;
+  background-color: #F8F8F8;
 }
 .restaurant h2 {
   width: 90%;
+  font-family: Roboto, Sans-serif;
 }
 
 /*card*/
@@ -163,6 +174,7 @@
 .card__text p {
   margin: 0;
   line-height: 27px;
+  font-family: Shrikhand, Sans-serif;
 }
 .card:hover {
   transform: scale(1.1);
@@ -221,11 +233,14 @@
   color: white;
 }
 .container-footer h3 {
-  padding-bottom: 15px;
+  padding-bottom: 20px;
+  font-family: Roboto, Sans-serif;
+  font-weight: 700;
 }
 .container-footer li {
   list-style: none;
   padding-bottom: 5px;
+  font-family: Shrikhand, Sans-serif;
 }
 .container-footer .footer-list-suggest {
   padding-right: 9px;
@@ -243,9 +258,23 @@
   border-radius: 40px 40px 0px 0px;
 }
 
+/**The Menu Full Pallette title**/
 .menu {
   width: 90%;
   margin: auto;
+}
+.menu__title {
+  padding-top: 18px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: space-between;
+}
+.menu__title h2 {
+  font-family: Roboto, Sans-serif;
+  /**not working**/
+  font-weight: 700;
 }
 .menu-tab {
   background-color: white;
@@ -280,7 +309,7 @@
   bottom: 10px;
 }
 .menu-tab-tick {
-  background: #009673;
+  background: #99E2D0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -290,13 +319,6 @@
 }
 .menu-tab-tick i {
   color: white;
-}
-
-.menu-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  justify-content: space-between;
 }
 
 @media screen and (min-width: 992px) {
@@ -317,7 +339,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 8px 2px rgb(23, 212, 83);
+  box-shadow: 5px 6px 6px 5px rgb(212, 121, 230);
 }
 .logo img {
   -o-object-fit: contain;

@@ -265,16 +265,25 @@
 }
 .menu__title {
   padding-top: 18px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   justify-content: space-between;
+  /**not working**/
 }
 .menu__title h2 {
   font-family: Roboto, Sans-serif;
-  /**not working**/
   font-weight: 700;
+}
+.menu__underline {
+  border: 1px solid #99E2D0;
+  margin-bottom: 15px;
+  width: 35px;
+}
+.menu__underline:hover:after {
+  width: 100%;
+  transition: all 0.5s;
 }
 .menu-tab {
   background-color: white;

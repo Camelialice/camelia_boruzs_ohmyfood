@@ -119,7 +119,7 @@
   align-items: center;
   gap: 15px;
   animation: opacity 1s ease-in-out forwards;
-  animation-delay: 3s;
+  animation-delay: 0.8s;
 }
 
 .loader::after {
@@ -163,7 +163,7 @@
   box-shadow: rgba(99, 99, 99, 0.2) 2px 3px 8px 0px;
 }
 .filter-search__chose:hover {
-  background-color: #9356DC;
+  background-color: #F5EDFF;
 }
 .filter-search__text {
   color: black;
@@ -201,7 +201,7 @@
   flex-direction: column;
   padding-top: 30px;
   padding-bottom: 30px;
-  gap: 15px;
+  gap: 18px;
   background-color: #F8F8F8;
 }
 .restaurant h2 {
@@ -300,13 +300,11 @@
 }
 .container-footer h3 {
   padding-bottom: 20px;
-  font-family: Roboto, Sans-serif;
-  font-weight: 700;
+  font-size: 25px;
 }
 .container-footer li {
   list-style: none;
   padding-bottom: 5px;
-  font-family: Shrikhand, Sans-serif;
 }
 .container-footer .footer-list-suggest {
   padding-right: 9px;
@@ -315,16 +313,25 @@
   padding-right: 4px;
 }
 
+.logo {
+  position: relative;
+}
+.logo__arrow-left {
+  position: absolute;
+  left: 35px;
+  font-size: 26px;
+  color: black;
+}
+
 .main {
   background-color: #f6f6f6;
   width: 100%;
   padding-top: 20px;
   position: relative;
   border-radius: 40px 40px 0px 0px;
-  margin-top: -35px;
+  margin-top: -50px;
 }
 
-/**The Menu Full Pallette title**/
 .menu {
   width: 90%;
   margin: auto;
@@ -341,6 +348,9 @@
 .menu__title h2 {
   font-family: Roboto, Sans-serif;
   font-weight: 700;
+}
+.menu__title i {
+  font-size: 22px;
 }
 .menu__underline {
   border: 1px solid #99E2D0;
@@ -846,7 +856,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 6px 6px 5px rgba(26, 25, 26, 0.2);
+  box-shadow: 0px 3px 3px 0px rgba(26, 25, 26, 0.094);
 }
 .logo img {
   -o-object-fit: contain;

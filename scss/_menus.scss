@@ -1,3 +1,15 @@
+.logo {
+    position: relative;
+
+    &__arrow-left {
+        position: absolute;
+        left: 35px;       
+        font-size: 26px;
+        color: black;
+    }
+
+
+}
 
 .main {
      background-color: #f6f6f6;
@@ -5,11 +17,11 @@
      padding-top: 20px; 
      position: relative;
      border-radius: 40px 40px 0px 0px;
-     margin-top: -35px;
+     margin-top: -50px;
 }
 
 
-  /**The Menu Full Pallette title**/
+
 .menu {
     width: 90%;
     margin: auto;
@@ -27,8 +39,13 @@
             font-weight: map-get($font-weights, bold);
                
         }
-
-     }
+    
+        i {
+            font-size: 22px;
+        }
+    
+      
+    }
 
      &__underline {
      border: 1px solid #99E2D0;

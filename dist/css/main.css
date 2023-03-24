@@ -6,6 +6,40 @@
     transform: rotate(0turn);
   }
 }
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-40px);
+  }
+  75% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes fading {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -72,6 +106,39 @@
   font-family: Shrikhand, Sans-serif;
 }
 
+.loader {
+  position: fixed;
+  z-index: 9999;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  animation: opacity 1s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+.loader::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: #9356DC;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.loader::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: red;
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
 /*How it works filters*/
 .filter-search {
   display: flex;
@@ -97,7 +164,6 @@
 }
 .filter-search__chose:hover {
   background-color: #9356DC;
-  opacity: 0.1;
 }
 .filter-search__text {
   color: black;
@@ -254,8 +320,8 @@
   width: 100%;
   padding-top: 20px;
   position: relative;
-  bottom: 90px;
   border-radius: 40px 40px 0px 0px;
+  margin-top: -35px;
 }
 
 /**The Menu Full Pallette title**/
@@ -294,6 +360,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  animation: fading 1s ease-in-out forwards;
+  animation-fill-mode: backwards;
+  /**ellipsis**/
 }
 .menu-tab:hover .menu-tab-tick {
   transform: translateX(0);
@@ -308,6 +377,14 @@
 .menu-tab-text {
   width: 90%;
   padding: 10px 20px;
+  /**elipsis**/
+  position: relative;
+  width: 80%;
+}
+.menu-tab p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-tab-price {
   width: 10%;
@@ -325,9 +402,430 @@
   width: 0%;
   transform: translateX(100%);
   transition: all 0.6s ease-in-out;
+  /**ellipsis**/
+  cursor: pointer;
 }
 .menu-tab-tick i {
   color: white;
+}
+.menu__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  row-gap: 20px;
+  padding: 40px 0;
+  background-color: #F8F8F8;
+}
+.menu__order-btn {
+  background-color: #FF79DA;
+  border-radius: 25px;
+  width: 180px;
+  height: 40px;
+  border: none;
+  font-size: 14px;
+  color: #eeeeee;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+  /*not working*/
+  font-family: Roboto, Sans-serif;
+}
+
+/**loop structure**/
+.fade-in--1 {
+  animation-delay: 100ms;
+}
+
+.fade-in--2 {
+  animation-delay: 200ms;
+}
+
+.fade-in--3 {
+  animation-delay: 300ms;
+}
+
+.fade-in--4 {
+  animation-delay: 400ms;
+}
+
+.fade-in--5 {
+  animation-delay: 500ms;
+}
+
+.fade-in--6 {
+  animation-delay: 600ms;
+}
+
+.fade-in--7 {
+  animation-delay: 700ms;
+}
+
+.fade-in--8 {
+  animation-delay: 800ms;
+}
+
+.fade-in--9 {
+  animation-delay: 900ms;
+}
+
+.fade-in--10 {
+  animation-delay: 1000ms;
+}
+
+.fade-in--11 {
+  animation-delay: 1100ms;
+}
+
+.fade-in--12 {
+  animation-delay: 1200ms;
+}
+
+.fade-in--13 {
+  animation-delay: 1300ms;
+}
+
+.fade-in--14 {
+  animation-delay: 1400ms;
+}
+
+.fade-in--15 {
+  animation-delay: 1500ms;
+}
+
+.fade-in--16 {
+  animation-delay: 1600ms;
+}
+
+.fade-in--17 {
+  animation-delay: 1700ms;
+}
+
+.fade-in--18 {
+  animation-delay: 1800ms;
+}
+
+.fade-in--19 {
+  animation-delay: 1900ms;
+}
+
+.fade-in--20 {
+  animation-delay: 2000ms;
+}
+
+.fade-in--21 {
+  animation-delay: 2100ms;
+}
+
+.fade-in--22 {
+  animation-delay: 2200ms;
+}
+
+.fade-in--23 {
+  animation-delay: 2300ms;
+}
+
+.fade-in--24 {
+  animation-delay: 2400ms;
+}
+
+.fade-in--25 {
+  animation-delay: 2500ms;
+}
+
+.fade-in--26 {
+  animation-delay: 2600ms;
+}
+
+.fade-in--27 {
+  animation-delay: 2700ms;
+}
+
+.fade-in--28 {
+  animation-delay: 2800ms;
+}
+
+.fade-in--29 {
+  animation-delay: 2900ms;
+}
+
+.fade-in--30 {
+  animation-delay: 3000ms;
+}
+
+.fade-in--31 {
+  animation-delay: 3100ms;
+}
+
+.fade-in--32 {
+  animation-delay: 3200ms;
+}
+
+.fade-in--33 {
+  animation-delay: 3300ms;
+}
+
+.fade-in--34 {
+  animation-delay: 3400ms;
+}
+
+.fade-in--35 {
+  animation-delay: 3500ms;
+}
+
+.fade-in--36 {
+  animation-delay: 3600ms;
+}
+
+.fade-in--37 {
+  animation-delay: 3700ms;
+}
+
+.fade-in--38 {
+  animation-delay: 3800ms;
+}
+
+.fade-in--39 {
+  animation-delay: 3900ms;
+}
+
+.fade-in--40 {
+  animation-delay: 4000ms;
+}
+
+.fade-in--41 {
+  animation-delay: 4100ms;
+}
+
+.fade-in--42 {
+  animation-delay: 4200ms;
+}
+
+.fade-in--43 {
+  animation-delay: 4300ms;
+}
+
+.fade-in--44 {
+  animation-delay: 4400ms;
+}
+
+.fade-in--45 {
+  animation-delay: 4500ms;
+}
+
+.fade-in--46 {
+  animation-delay: 4600ms;
+}
+
+.fade-in--47 {
+  animation-delay: 4700ms;
+}
+
+.fade-in--48 {
+  animation-delay: 4800ms;
+}
+
+.fade-in--49 {
+  animation-delay: 4900ms;
+}
+
+.fade-in--50 {
+  animation-delay: 5000ms;
+}
+
+.fade-in--51 {
+  animation-delay: 5100ms;
+}
+
+.fade-in--52 {
+  animation-delay: 5200ms;
+}
+
+.fade-in--53 {
+  animation-delay: 5300ms;
+}
+
+.fade-in--54 {
+  animation-delay: 5400ms;
+}
+
+.fade-in--55 {
+  animation-delay: 5500ms;
+}
+
+.fade-in--56 {
+  animation-delay: 5600ms;
+}
+
+.fade-in--57 {
+  animation-delay: 5700ms;
+}
+
+.fade-in--58 {
+  animation-delay: 5800ms;
+}
+
+.fade-in--59 {
+  animation-delay: 5900ms;
+}
+
+.fade-in--60 {
+  animation-delay: 6000ms;
+}
+
+.fade-in--61 {
+  animation-delay: 6100ms;
+}
+
+.fade-in--62 {
+  animation-delay: 6200ms;
+}
+
+.fade-in--63 {
+  animation-delay: 6300ms;
+}
+
+.fade-in--64 {
+  animation-delay: 6400ms;
+}
+
+.fade-in--65 {
+  animation-delay: 6500ms;
+}
+
+.fade-in--66 {
+  animation-delay: 6600ms;
+}
+
+.fade-in--67 {
+  animation-delay: 6700ms;
+}
+
+.fade-in--68 {
+  animation-delay: 6800ms;
+}
+
+.fade-in--69 {
+  animation-delay: 6900ms;
+}
+
+.fade-in--70 {
+  animation-delay: 7000ms;
+}
+
+.fade-in--71 {
+  animation-delay: 7100ms;
+}
+
+.fade-in--72 {
+  animation-delay: 7200ms;
+}
+
+.fade-in--73 {
+  animation-delay: 7300ms;
+}
+
+.fade-in--74 {
+  animation-delay: 7400ms;
+}
+
+.fade-in--75 {
+  animation-delay: 7500ms;
+}
+
+.fade-in--76 {
+  animation-delay: 7600ms;
+}
+
+.fade-in--77 {
+  animation-delay: 7700ms;
+}
+
+.fade-in--78 {
+  animation-delay: 7800ms;
+}
+
+.fade-in--79 {
+  animation-delay: 7900ms;
+}
+
+.fade-in--80 {
+  animation-delay: 8000ms;
+}
+
+.fade-in--81 {
+  animation-delay: 8100ms;
+}
+
+.fade-in--82 {
+  animation-delay: 8200ms;
+}
+
+.fade-in--83 {
+  animation-delay: 8300ms;
+}
+
+.fade-in--84 {
+  animation-delay: 8400ms;
+}
+
+.fade-in--85 {
+  animation-delay: 8500ms;
+}
+
+.fade-in--86 {
+  animation-delay: 8600ms;
+}
+
+.fade-in--87 {
+  animation-delay: 8700ms;
+}
+
+.fade-in--88 {
+  animation-delay: 8800ms;
+}
+
+.fade-in--89 {
+  animation-delay: 8900ms;
+}
+
+.fade-in--90 {
+  animation-delay: 9000ms;
+}
+
+.fade-in--91 {
+  animation-delay: 9100ms;
+}
+
+.fade-in--92 {
+  animation-delay: 9200ms;
+}
+
+.fade-in--93 {
+  animation-delay: 9300ms;
+}
+
+.fade-in--94 {
+  animation-delay: 9400ms;
+}
+
+.fade-in--95 {
+  animation-delay: 9500ms;
+}
+
+.fade-in--96 {
+  animation-delay: 9600ms;
+}
+
+.fade-in--97 {
+  animation-delay: 9700ms;
+}
+
+.fade-in--98 {
+  animation-delay: 9800ms;
+}
+
+.fade-in--99 {
+  animation-delay: 9900ms;
 }
 
 @media screen and (min-width: 992px) {
@@ -348,7 +846,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 6px 6px 5px rgb(212, 121, 230);
+  box-shadow: 5px 6px 6px 5px rgba(26, 25, 26, 0.2);
 }
 .logo img {
   -o-object-fit: contain;

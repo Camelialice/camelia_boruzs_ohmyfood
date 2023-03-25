@@ -8,7 +8,7 @@
 
 .city_location p{
     padding-left: 10px;
-    font-family: $font-title;
+    font-family: $font-text;
  }
 
 .map-icon {
@@ -17,14 +17,14 @@
 
 
 
-/*book_menu*/
+
 .book_menu {
     @include column;
     align-items: center;
     width: 100%;
     row-gap: 20px;
     padding: 40px 0;
-    background-color:  #F8F8F8;
+    background-color: $background;
     &__btn {
         background-color: #FF79DA;
         border-radius: 25px;
@@ -33,34 +33,32 @@
         border: none;
         font-size: 14px;
         color: #eeeeee;
-        background-image: linear-gradient(#FF79DA , #9356DC);   
-        /*not working*/
-        font-family: $font-title; 
+        background-image: linear-gradient( $secondary, $primary);   
+        font-family: $font-text; 
     }
 
     &__p {
        font-size: 30px;
        text-align: center;
-       font-family: $font-title;    
+       font-family: $font-text;    
         
     }
 
     #{&}__p{
-        font-weight: map-get($font-weights, bold)       
+        font-weight: map-get($font-weights, bold);       
     }
 
     #{&}__p1{
-        font-weight: map-get($font-weights, thin)        
+        font-weight: map-get($font-weights, thin);       
     }
 
     &__p1 {
-        font-size: 16px;
+        font-size: 18px;
         text-align: center;
         margin: 5px 50px 10px 50px;
         font-family: $font-text;
         
     }
-
 
 }
 
@@ -72,27 +70,30 @@
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: #99E2D0;
+    background-color: $background;
     @include center;
     gap: 15px;
     animation: opacity 1s ease-in-out forwards;
-    animation-delay: .8s;
+    animation-delay: .5s;
 }
+
+
 
 .loader::after {
     content: "";   
-    width: 30px;
-    height: 30px;
-    background:#9356DC;
+    width: 20px;
+    height: 20px;
+    background: $secondary;
     animation: bounce 2s ease-in-out infinite;
 }
 
 
+
 .loader::before {
     content: "";   
-    width: 30px;
-    height: 30px;
-    background:red;
+    width: 20px;
+    height: 20px;
+    background: $primary;
     animation: bounce 2s ease-in-out infinite;
     animation-delay: .5s;
 }
@@ -111,7 +112,7 @@
         border: none;
         border-radius: 18px;
         height: 75px; 
-        background-color: #F8F8F8 ; 
+        background-color: $background;
         width: 100%;
         position: relative;
         @include center;
@@ -130,6 +131,7 @@
         color: black;    
         margin-left: 10px;  
         font-family: $font-text;
+        font-weight: map-get($font-weights, medium); 
                       
    }
 
@@ -140,7 +142,7 @@
 
     &__number {
         @include center;    
-        background-color: #9356DC;
+        background-color: $primary;
         color: #ffffff;
         border-radius: 100%;             
         width: 20px;  
@@ -154,27 +156,26 @@
     }
 
     & h2 {
-        font-family: $font-title;
+        font-family: $font-text;
     }
 
 }
 
 
- /*restaurant*/
+
 .restaurant {
     @include center;
     @include column;
     padding-top: 30px;
     padding-bottom: 30px;
     gap: 18px;
-    background-color: #F8F8F8;
-    h2 {
-        width: 90%;
-        font-family: $font-title;
+    background-color: $background;
+    h2 {       
+        font-family: $font-text;
     }
 }
   
-  /*card*/
+ 
 .card {
     width: 90%;  
     border-radius: 15px;
@@ -274,23 +275,23 @@
 
 }
 
-/**footer**/
 .container-footer {
     @include column;
     padding-left: 30px;
     padding-bottom: 30px;
     color: white;
        
-   h3 {
-        padding-bottom: 20px;
-        font-size: 25px;
-  
+   p {
+        padding-bottom: 15px;
+        font-size: 20px;
+        font-family: $font-title;
+      
     }
     
     li {
         list-style: none;
         padding-bottom:5px;
-       }  
+    }  
    
     .footer-list-suggest {
         padding-right: 9px;
@@ -299,4 +300,5 @@
 
     .footer-list-suggest1 {
         padding-right: 4px;
-    } }
+    }
+ }

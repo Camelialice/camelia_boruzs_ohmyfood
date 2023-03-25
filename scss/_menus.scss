@@ -7,6 +7,7 @@
         left: 35px;       
         font-size: 26px;
         color: black;
+        
     }
 
 
@@ -37,16 +38,22 @@
         @include row;   
         justify-content: space-between;   
 
-         /**not working**/
-        
+              
         h2 {
             font-family: $font-title;           
-            font-weight: map-get($font-weights, bold);
+            font-weight: map-get($font-weights, medium);
                
         }
+
+        h3 {
+            font-weight: map-get($font-weights, thin);
+        }
+
+          
     
         i {
-            font-size: 22px;
+            font-size: 25px;
+            font-weight: map-get($font-weights, thin);
         }
     
       
@@ -80,9 +87,7 @@
 
      
   
-
-
-                          
+                         
         &:hover &-tick {
             transform: translateX(0);
             width: 20%;
@@ -99,14 +104,30 @@
         }  
           
     
-        &-text {
+        &-text {            
             width: 90%;
             padding: 10px 20px;
              /**elipsis**/
             position: relative;
             width: 80%; 
+
+
+            h4 {
+                font-size: 20px;
+                font-weight: map-get($font-weights, bold);
+                line-height: 32px ;
+            }
+
+            p {           
+                font-family: $font-text;
+                font-size: 14px;                  
+            }
+
+         
         }
 
+        
+        
         /**ellipsis**/
         & p {     
             
@@ -147,7 +168,7 @@
     }
 
 
-
+  
      
     &__button {
         @include column;
@@ -169,11 +190,9 @@
         color: #eeeeee;
         background-image: linear-gradient(#FF79DA , #9356DC);   
         cursor: pointer;
-        /*not working*/
-        font-family: $font-title; 
+        font-family: $font-text; 
         
-
-    }
+   }
 
 
 }
@@ -185,6 +204,6 @@
      @for $i from 1 through 99  {
             .fade-in--#{$i}{
            animation-delay: 100ms*$i;
-           }
+        }
     }
 

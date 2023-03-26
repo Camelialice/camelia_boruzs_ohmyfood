@@ -277,8 +277,8 @@
   position: absolute;
   opacity: 0;
   background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
   -webkit-background-clip: text;
-          background-clip: text;
 }
 .card .heart__icon:hover .heart__icon--full {
   opacity: 1;
@@ -535,6 +535,22 @@
   animation-delay: 2000ms;
 }
 
+@media screen and (min-width: 768px) {
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+  }
+  .restaurant .card {
+    width: 42%;
+  }
+  .restaurant h2 {
+    width: 90%;
+  }
+}
 @media screen and (min-width: 992px) {
   .filter-search__chose {
     height: 80px;

@@ -1,8 +1,35 @@
+  
+@include tablet {
+    .restaurant {
+        @include row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 40px;
+
+        .card {
+            width: 42%;
+            
+        }
+
+        h2 {
+            width: 90%;
+        }
+
+    }
+
+    
+}
+
+
+
+
+
+
+
 @include desktop {
 
     .filter-search {
              
-
         &__chose {            
             height: 80px; 
             width: 300px;
@@ -34,33 +61,27 @@
         gap: 15px;  
             
        
-        .card {
+    .card {
             width: 22.5%;
         }
 
 
        h2 {
         width: 85%;      
-       }
+        }
          
     }
-
 
    .card-deck {
         @include row;
         gap: 15px;
    }
 
-
    
 }
 
 
-@mixin tablet {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
-}
+
 
 
 

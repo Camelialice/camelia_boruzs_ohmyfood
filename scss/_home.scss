@@ -25,8 +25,7 @@
     row-gap: 20px;
     padding: 40px 0;
     background-color: $background;
-    &__btn {
-        background-color: #FF79DA;
+    &__btn {       
         border-radius: 25px;
         width: 180px;
         height: 40px;
@@ -74,28 +73,34 @@
     @include center;
     gap: 15px;
     animation: opacity 1s ease-in-out forwards;
-    animation-delay: .5s;
+    animation-delay: 5s;
 }
 
 
 
-.loader::after {
-    content: "";   
+.loader .box {
     width: 20px;
-    height: 20px;
-    background: $secondary;
-    animation: bounce 2s ease-in-out infinite;
+    height: 20px;   
+  
 }
 
-
-
-.loader::before {
-    content: "";   
-    width: 20px;
-    height: 20px;
+.loader .box:nth-child(1) {
     background: $primary;
-    animation: bounce 2s ease-in-out infinite;
-    animation-delay: .5s;
+    animation: bounce 2s ease-in-out infinite, opacity 1s 3s ease-in-out forwards;    
+    
+}
+
+
+.loader .box:nth-child(2) {
+    background: $secondary;
+    animation: bounce 2s .5s ease-in-out infinite, opacity 1s 3s ease-in-out forwards;
+
+}
+
+.loader .box:nth-child(3) {
+    background:$tertiary;
+    animation: bounce 2s 1s ease-in-out infinite, opacity 1s 3s ease-in-out forwards;
+
 }
 
 
@@ -107,8 +112,10 @@
     margin-right: 30px;
     padding-top: 40px;
     padding-bottom: 40px;
-   
-    &__chose {     
+
+      
+    &__chose {  
+        margin-bottom: 35px;   
         border: none;
         border-radius: 18px;
         height: 75px; 
@@ -159,7 +166,11 @@
         font-family: $font-text;
     }
 
+       
+
 }
+
+
 
 
 
@@ -224,7 +235,7 @@
         position: absolute;
         z-index: 1;
         color: #009673;        
-        background: #99E2D0;
+        background: $tertiary;
         padding: 5px 25px;
         top: 15px;
         right: 15px;
@@ -247,23 +258,23 @@
         z-index: 1;           
         font-size: 28px;  
         @include center;
-        width: 20%;
+        width: 20%;    
        
-     
-  
-        &--empty {
+           
+       &--empty {
             position: absolute;
         }
 
         &--full {
             position: absolute;
-            opacity: 0;
-            background: linear-gradient(#FF79DA , #9356DC);
+            opacity: 0;  
+            background: linear-gradient(#FF79DA , #9356DC);   
             background-clip: text;
         }
                                           
-    }     
-
+    }  
+    
+   
     .heart__icon:hover .heart__icon--full {
         opacity: 1;
     }

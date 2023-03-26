@@ -60,7 +60,7 @@
     }
 
      &__underline {
-     border: 1px solid #99E2D0;
+     border: 1px solid $tertiary;
      margin-bottom: 15px;
      width: 35px;
      }
@@ -167,7 +167,6 @@
 
     }
 
-
   
      
     &__button {
@@ -176,34 +175,31 @@
         width: 100%;
         row-gap: 20px;
         padding: 40px 0;
-        background-color:  #F8F8F8;  
+        background-color: $background;
     
     }
 
     &__order-btn {
-        background-color: #FF79DA;
         border-radius: 25px;
         width: 180px;
         height: 40px;
         border: none;
         font-size: 14px;
         color: #eeeeee;
-        background-image: linear-gradient(#FF79DA , #9356DC);   
+        background-image: linear-gradient($secondary , $primary);   
         cursor: pointer;
-        font-family: $font-text; 
-        
+        font-family: $font-text;         
    }
 
 
 }
 
 
-
-
-      /**loop structure**/
-     @for $i from 1 through 99  {
-            .fade-in--#{$i}{
-           animation-delay: 100ms*$i;
-        }
+        /**loop**/
+@for $i from 1 through 20  {
+    .fade-in--#{$i}{
+        animation-delay: 100ms*$i;
     }
+}
+
 

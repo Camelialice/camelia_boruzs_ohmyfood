@@ -1,25 +1,27 @@
 @include desktop {
 
- 
     .filter-search {
-        width: 90%;
-        @include row;
-        justify-content: center;
-        gap: 42px;
-      
+             
 
         &__chose {            
             height: 80px; 
             width: 300px;
-         
-                                 
+                                        
         }
 
-        & h2 {         
-            padding-top: 20px;    
-             
+        .how-to {
+            display: block;
+            width: 100%;
+            margin: auto;
+            @include center;
+           
         }
-
+        
+        .filters {
+            @include row;
+            justify-content: center;
+            gap: 42px;
+        }
                     
     }
 
@@ -29,20 +31,37 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-content:space-around;
-        gap: 40px;  
-        padding: 40px 200px;
-     
+        gap: 15px;  
+            
        
         .card {
-            width: 35%;
-         }
+            width: 22.5%;
+        }
 
 
        h2 {
-        width: 85%;
+        width: 85%;      
        }
          
     }
 
+
+   .card-deck {
+        @include row;
+        gap: 15px;
+   }
+
+
+   
 }
+
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+
+
 

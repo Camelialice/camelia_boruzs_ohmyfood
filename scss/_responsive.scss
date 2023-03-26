@@ -17,6 +17,14 @@
 
     }
 
+    .container-footer {
+        @include row;
+        justify-content: space-between;
+        padding: 0 20px;
+      
+      
+    }
+
     
 }
 
@@ -77,6 +85,18 @@
         gap: 15px;
    }
 
+
+
+   .container-footer {
+        @include row;
+        justify-content: space-evenly;
+        width: 70%;
+        padding-left: 20%;
+      
+     }
+
+  
+ 
    
 }
 

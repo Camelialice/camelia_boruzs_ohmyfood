@@ -82,8 +82,15 @@
   border: none;
   font-size: 14px;
   color: #eeeeee;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
   font-family: Roboto, Sans-serif;
+}
+.book_menu__btn:hover {
+  transition-duration: 500ms;
+  box-shadow: #9356DC 0px 2px 8px 0px;
+  background: linear-gradient(#FF79DA, #9356DC);
 }
 .book_menu__p {
   font-size: 30px;
@@ -277,8 +284,9 @@
   position: absolute;
   opacity: 0;
   background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
   -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .card .heart__icon:hover .heart__icon--full {
   opacity: 1;
@@ -555,7 +563,7 @@
     flex-direction: row;
     justify-content: flex-start;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 40px;
   }
 }
 @media screen and (min-width: 992px) {

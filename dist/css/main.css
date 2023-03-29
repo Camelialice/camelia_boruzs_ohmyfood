@@ -320,6 +320,11 @@
   padding-right: 4px;
 }
 
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
 .logo {
   position: relative;
 }

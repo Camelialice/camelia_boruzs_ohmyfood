@@ -1,0 +1,330 @@
+.city_location {
+    @include center;
+    width: 100%;
+    height: 40px;
+    background-color: #eeeeee; 
+ 
+}
+
+.city_location p{
+    padding-left: 10px;
+    font-family: $font-text;
+ }
+
+.map-icon {
+    @include center;    
+}
+
+
+.book_menu {
+    @include column;
+    align-items: center;
+    width: 100%;
+    row-gap: 20px;
+    padding: 40px 0;
+    background-color: $background;
+    
+
+    &__btn {       
+        border-radius: 25px;
+        width: 180px;
+        height: 40px;
+        border: none;
+        font-size: 14px;
+        color: #eeeeee;
+        background: linear-gradient( $secondary, $primary); 
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  
+        cursor: pointer;
+        font-family: $font-text; 
+
+        &:hover{
+            transition-duration: 500ms;
+            box-shadow: $primary 0px 2px 8px 0px; 
+            background: linear-gradient($secondary, $primary);
+        } 
+
+    }
+
+    &__p {
+       font-size: 30px;
+       text-align: center;
+       font-family: $font-text;    
+        
+    }
+
+    #{&}__p{
+        font-weight: map-get($font-weights, bold);       
+    }
+
+    #{&}__p1{
+        font-weight: map-get($font-weights, thin);       
+    }
+
+    &__p1 {
+        font-size: 18px;
+        text-align: center;
+        margin: 5px 50px 10px 50px;
+        font-family: $font-text;
+        
+    }
+
+}
+
+
+.loader {
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $background;
+    @include center;
+    gap: 15px;
+    animation: opacity 1s ease-in-out forwards;
+    animation-delay: 5s;
+}
+
+
+
+.loader .box {
+    width: 20px;
+    height: 20px;   
+  
+}
+
+.loader .box:nth-child(1) {
+    background: $primary;
+    animation: bounce 2s ease-in-out infinite, opacity 1s 3s ease-in-out forwards;    
+    
+}
+
+
+.loader .box:nth-child(2) {
+    background: $secondary;
+    animation: bounce 2s .5s ease-in-out infinite, opacity 1s 3s ease-in-out forwards;
+
+}
+
+.loader .box:nth-child(3) {
+    background:$tertiary;
+    animation: bounce 2s 1s ease-in-out infinite, opacity 1s 3s ease-in-out forwards;
+
+}
+
+
+/*How it works filters*/
+.filter-search {
+    @include column;
+    gap: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+      
+    &__chose {  
+        margin-bottom: 35px;   
+        border: none;
+        border-radius: 18px;
+        height: 75px; 
+        background-color: $background;
+        width: 100%;
+        position: relative;
+        @include center;
+        justify-content: flex-start;
+        box-shadow: rgba(99, 99, 99, .2) 2px 3px 8px 0px;
+       
+    }
+
+
+    &__chose:hover {
+        background-color: #F5EDFF;
+      }
+
+
+    &__text {         
+        color: black;    
+        margin-left: 10px;  
+        font-family: $font-text;
+        font-weight: map-get($font-weights, medium); 
+                      
+   }
+
+   .fa-solid {
+    padding-right: 10px;
+   }
+
+
+    &__number {
+        @include center;    
+        background-color: $primary;
+        color: #ffffff;
+        border-radius: 100%;             
+        width: 20px;  
+        height: 20px;        
+        font-size: 13px; 
+        z-index: 1;           
+        font-size: 14px; 
+        position: relative;  
+        left: -10px;
+     
+    }
+
+    & h2 {
+        font-family: $font-text;
+    }
+
+       
+
+}
+
+
+
+
+
+.restaurant {
+    @include center;
+    @include column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 18px;
+    background-color: $background;
+    h2 {       
+        font-family: $font-text;
+    }
+}
+  
+ 
+.card {
+    width: 90%;  
+    border-radius: 15px;
+    overflow: hidden;  
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+    @include pointsix;
+
+
+    &__image {
+        width: 100%;
+        height: 160px;
+        position: relative;    
+       
+    }
+  
+    &__image:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(20, 20, 20, .2);
+    }
+
+        
+    &__text {
+        display: flex;
+        flex-direction: column;   
+        padding: 10px;
+        color: black;
+    }    
+
+ 
+    &__text p {
+        margin: 0;
+        line-height: 27px;
+        font-family: $font-text;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+        
+    .new-button {
+        position: absolute;
+        z-index: 1;
+        color: #009673;        
+        background: $tertiary;
+        padding: 5px 25px;
+        top: 15px;
+        right: 15px;
+        border-radius: 2px;
+    }
+
+    .new-button{
+        font-weight: map-get($font-weights, bold)       
+    }
+   
+   
+    &__text {
+        position: relative;
+        width: 80%;
+     }
+
+ 
+    .heart__icon {      
+        position: relative;  
+        z-index: 1;           
+        font-size: 28px;  
+        @include center;
+        width: 20%;    
+       
+           
+       &--empty {
+            position: absolute;
+        }
+
+        &--full {
+            position: absolute;
+            opacity: 0;  
+            background: linear-gradient($secondary, $primary);   
+            background-clip: text;          
+            -webkit-text-fill-color: transparent;
+        }
+                                          
+    }  
+    
+   
+    .heart__icon:hover .heart__icon--full {
+        opacity: 1;
+    }
+
+
+    &__footer {
+        @include row;
+    }
+
+}
+
+.container-footer {
+    @include column;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    color: white;
+       
+   p {
+        padding-bottom: 15px;
+        font-size: 20px;
+        font-family: $font-title;
+      
+    }
+    
+    li {
+        list-style: none;
+        padding-bottom:5px;
+    }  
+   
+    .footer-list-suggest {
+        padding-right: 9px;
+    }
+    
+
+    .footer-list-suggest1 {
+        padding-right: 4px;
+    }
+ }
+
+    footer a{
+        text-decoration: none;
+        color: white;
+    }

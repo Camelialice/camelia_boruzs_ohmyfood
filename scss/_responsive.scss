@@ -1,0 +1,108 @@
+  
+@include tablet {
+    .restaurant {
+        @include row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 40px;
+
+        .card {
+            width: 42%;
+            
+        }
+
+        h2 {
+            width: 90%;
+        }
+
+    }
+
+    .container-footer {
+        @include row;
+        justify-content: space-between;
+        padding: 0 40px;
+      
+      
+    }
+
+    
+}
+
+
+
+
+
+
+
+@include desktop {
+
+    .filter-search {
+             
+        &__chose {            
+            height: 80px; 
+            width: 300px;
+                                        
+        }
+
+        .how-to {
+            display: block;
+            width: 100%;
+            margin: auto;
+            @include center;
+           
+        }
+        
+        .filters {
+            @include row;
+            justify-content: center;
+            gap: 42px;
+        }
+                    
+    }
+
+
+    .restaurant {             
+        @include row;              
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content:space-around;
+        gap: 15px;  
+            
+       
+    .card {
+            width: 22.5%;
+        }
+
+
+       h2 {
+        width: 85%;      
+        }
+         
+    }
+
+   .card-deck {
+        @include row;
+        gap: 15px;
+   }
+
+
+
+   .container-footer {
+        @include row;
+        justify-content: space-evenly;
+        width: 70%;
+        padding-left: 20%;
+      
+     }
+
+  
+ 
+   
+}
+
+
+
+
+
+
+

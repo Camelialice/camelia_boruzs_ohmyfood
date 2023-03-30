@@ -1,0 +1,202 @@
+.logo {
+    position: relative;
+
+
+    &__arrow-left {
+        position: absolute;
+        left: 35px;       
+        font-size: 26px;
+        color: black;
+        
+    }
+
+
+}
+
+.main {
+     background-color: #f6f6f6;
+     width: 100%;
+     padding-top: 20px; 
+     position: relative;
+     border-radius: 40px 40px 0px 0px;
+     margin-top: -50px;
+
+  }
+
+
+  .menu-page-image {
+    height: 290px;
+  }
+
+.menu {
+    width: 90%;
+    margin: auto;
+
+    &__title {
+        padding-top: 18px;
+        padding-bottom: 0px;
+        @include row;   
+        justify-content: space-between;   
+
+              
+        h2 {
+            font-family: $font-title;           
+            font-weight: map-get($font-weights, medium);
+               
+        }
+
+        h3 {
+            font-weight: map-get($font-weights, thin);
+        }
+
+          
+    
+        i {
+            font-size: 25px;
+            font-weight: map-get($font-weights, thin);
+        }
+    
+      
+    }
+
+     &__underline {
+     border: 1px solid $tertiary;
+     margin-bottom: 15px;
+     width: 35px;
+     }
+
+
+     &__underline:hover:after {
+        width: 100%;
+        transition: all .5s;
+     }
+
+ 
+    
+    &-tab {
+        background-color: white;
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 15px;    
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        animation: fading 1s ease-in-out forwards;
+        animation-fill-mode: backwards;
+
+     
+  
+                         
+        &:hover &-tick {
+            transform: translateX(0);
+            width: 20%;
+           
+        }  
+
+        &:hover &-tick i {
+            animation: rotate .9s forwards;
+        }
+
+
+        &:hover &-text {
+           width: 70%;
+        }  
+          
+    
+        &-text {            
+            width: 90%;
+            padding: 10px 20px;
+             /**elipsis**/
+            position: relative;
+            width: 80%; 
+
+
+            h4 {
+                font-size: 20px;
+                font-weight: map-get($font-weights, bold);
+                line-height: 32px ;
+            }
+
+            p {           
+                font-family: $font-text;
+                font-size: 14px;                  
+            }
+
+         
+        }
+
+        
+        
+        /**ellipsis**/
+        & p {                
+            overflow: hidden;     
+            white-space: nowrap;    
+            text-overflow: ellipsis;
+        }
+
+
+        
+        &-price {
+            width: 10%;
+            position: relative;
+
+            & h4 {
+                position:absolute;
+                bottom: 10px;
+            }
+        }
+
+        
+        &-tick {
+            background: $tertiary;
+            @include center;
+            width: 0%;
+            transform: translateX(100%);            
+            @include pointsix;            
+             cursor: pointer;                      
+
+            & i {
+                color: white;               
+                
+            }
+        }
+
+    }
+
+  
+     
+    &__button {
+        @include column;
+        align-items: center;
+        width: 100%;
+        row-gap: 20px;
+        padding: 40px 0;
+        background-color: $background;
+    
+    }
+
+    &__order-btn {
+        border-radius: 25px;
+        width: 180px;
+        height: 40px;
+        border: none;
+        font-size: 14px;
+        color: #eeeeee;
+        background-image: linear-gradient($secondary , $primary);   
+        cursor: pointer;
+        font-family: $font-text;         
+   }
+
+
+}
+
+
+        /**loop**/
+@for $i from 1 through 20  {
+    .fade-in--#{$i}{
+        animation-delay: 100ms*$i;
+    }
+}
+
+
